@@ -1,0 +1,490 @@
+/* Light Theme (default) */
+:root {
+  --bg-primary: #ffffff;
+  --text-primary: #141414;
+  --btn-primary: #002f63;
+  --header-bg: #e0e0e0;
+  --line: #000000;
+  --input: #fff;
+  --label: #002f63;
+  --btn-border: #002f63;
+  --btn-hover: #031f3f;
+  --btn-text: #ffff;
+  --bg-servisi: #e0e0e0;
+}
+
+/* Dark Theme */
+.dark-theme {
+  --bg-primary: #212121;
+  --text-primary: #ffffff;
+  --btn-primary: #212121;
+  --header-bg: #141414;
+  --line: #fff;
+  --input: #212121;
+  --label: #ffff;
+  --btn-border: #ff9900;
+  --btn-hover: #343434;
+  --btn-text: #ff9900;
+  --bg-servisi: #141414;
+}
+
+html {
+  scroll-padding-top: 6rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins";
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Uses the color of the parent element */
+}
+
+.headerbar_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* ensures it stays above other content */
+  background-color: var(--header-bg);
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.headerbar_subcontainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: right;
+  gap: 3rem;
+  padding-right: 6rem;
+}
+
+.theme-toggle-container {
+  position: fixed;
+  width: inherit;
+  z-index: 1001;
+
+  height: inherit;
+  text-align: right;
+  align-items: center;
+  margin-right: 5rem;
+  right: 10px;
+  top: 90px;
+}
+
+#sun-moon {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+#theme-toggle {
+  border: none;
+  background-color: transparent;
+}
+
+#header_banner {
+  height: 3rem;
+  padding-left: 6rem;
+}
+
+.link {
+  color: var(--text-primary);
+  font-weight: 100;
+}
+
+.landing_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly; /* changed from center to space-between */
+  height: 100vh;
+}
+
+#landing_logo {
+  width: 30rem;
+  height: 30rem;
+}
+
+.landing_subcontainer {
+  width: 30rem;
+}
+
+#landing_subtitle {
+  text-align: left;
+}
+
+.team_img {
+  background-color: #002f63;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 5%;
+}
+
+.team_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around; /* changed from center to space-between */
+  height: 60vh;
+  width: 100vw;
+}
+
+.description {
+  width: 20rem;
+}
+
+.quote_container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  padding-top: 10rem;
+}
+
+#quote_text {
+  width: 35rem;
+  font-size: 20px;
+}
+
+#quote {
+  font-size: 30px;
+  padding-bottom: 6rem;
+}
+
+#block {
+  background-color: var(--btn-border);
+  width: 5rem;
+  height: 0.7rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.servisi_container {
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  background-color: var(--bg-servisi);
+  margin-top: 5rem;
+  width: 100%;
+}
+
+#servisi {
+  font-size: 40px;
+  margin-bottom: 0;
+  letter-spacing: 0.1rem;
+}
+
+#servisi_opis {
+  margin-top: 0.7rem;
+  font-size: 22px;
+}
+
+.nasrad_landing_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 60vh;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+
+#img_nasrad {
+  background-color: #002f63;
+  width: 30rem;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 3%;
+}
+
+.nasrad_landing_subcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  width: 20%;
+}
+#nasrad_header {
+  margin-bottom: 0;
+}
+
+.line {
+  background-color: var(--line);
+  height: 20rem;
+  width: 2px;
+}
+
+.options_container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+}
+
+.options_subcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  width: 15%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.kontakt_container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  text-align: right;
+  height: calc(60vh - 5rem); /* Adjusted for header height */
+
+  padding-top: 15rem;
+  padding-bottom: 10rem;
+}
+
+.kontakt_img {
+  background-color: #002f63;
+  width: 25rem;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 5%;
+}
+
+.forum_img {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 5%;
+  object-fit: cover;
+  background-color: #002f63;
+}
+
+.forum_container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  text-align: left;
+}
+
+.input_field {
+  border: 3px solid #002f63;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: var(--input);
+}
+
+.input_field::placeholder {
+  color: var(--label);
+  opacity: 0.7;
+}
+
+.input_first {
+  display: inline-block;
+  max-width: 35rem;
+  width: 100%;
+}
+
+#message {
+  height: 8rem;
+}
+
+.input_second {
+  text-align: center;
+  width: 100%;
+}
+
+#email,
+#message {
+  box-sizing: border-box;
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
+#first_name,
+#last_name {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 17rem; /* Adjusted to fit two fields side by side */
+  width: 100%;
+}
+
+#contactForm {
+  box-sizing: border-box;
+  max-width: 35rem;
+  width: 100%;
+}
+
+#submit_btn {
+  width: 25%;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: var(--btn-primary);
+  border: var(--btn-border) solid 3px;
+
+  color: var(--btn-text);
+}
+
+#submit_btn:hover {
+  background-color: var(--btn-hover); /* Darker shade for hover effect */
+  cursor: pointer;
+}
+
+#first_name {
+  margin-top: 2rem;
+  margin-right: 0.7rem;
+}
+
+#first_name,
+#last_name,
+#email,
+#message,
+#submit_btn {
+  margin-bottom: 2rem;
+}
+
+#email_label {
+  text-align: left;
+}
+
+#first_name_label,
+#last_name_label {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+#first_name,
+#last_name {
+  margin-top: 0.3rem;
+}
+
+#first_name_label {
+  padding-right: 16rem;
+  padding-left: 0.5rem;
+}
+
+.label_forum {
+  color: #002f63;
+  padding-left: 0.5rem;
+  padding-bottom: 0.3rem;
+}
+
+#last_name_label {
+  margin-right: 0.5rem;
+}
+
+.active {
+  font-weight: 600;
+}
+
+.theme {
+  color: var(--label);
+}
+
+.hamburgerBtn {
+  width: 2rem;
+  height: 2rem;
+}
+
+#hamburgerBtn_options_container {
+  background-color: var(--header-bg);
+  align-items: center;
+  align-content: center;
+  text-align: right;
+  width: 6rem;
+  margin-top: 17px;
+}
+
+@media screen and (max-width: 950px) {
+  .link {
+    display: none;
+  }
+  #hamburgerID {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .hamburgerBtn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .landing_container {
+    margin-top: 5rem;
+    flex-wrap: wrap-reverse;
+    align-items: baseline;
+    margin-bottom: 10rem;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .quote_container {
+    margin-top: 25rem;
+  }
+}
+
+@media screen and (max-width: 743px) {
+  #img_nasrad {
+    display: none;
+  }
+  .nasrad_landing_subcontainer {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 985px) {
+  .forum_container {
+    flex-wrap: wrap;
+  }
+  .forum_img {
+    margin-bottom: 70px;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .options_container {
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 695px) {
+  .kontakt_container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .kontakt_text_container {
+    margin-left: 12.5rem;
+  }
+}
