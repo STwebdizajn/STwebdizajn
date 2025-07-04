@@ -139,6 +139,11 @@ a {
   border-radius: 5%;
 }
 
+#filip_name,
+#filip_description {
+  text-align: right;
+}
+
 .team_container {
   display: flex;
   flex-direction: row;
@@ -247,7 +252,7 @@ a {
 .line {
   width: 2px;
 
-  background-color: black;
+  background-color: var(--line);
 
   /* Stretch automatically to match the text height */
 }
@@ -301,6 +306,8 @@ a {
   padding: 10px;
   margin-bottom: 10px;
   background-color: var(--input);
+  color: var(--text-primary);
+  font-family: "Poppins";
 }
 
 .input_field::placeholder {
@@ -406,7 +413,7 @@ a {
 }
 
 .active {
-  font-weight: 600;
+  font-weight: 900;
 }
 
 .theme {
@@ -535,6 +542,11 @@ a {
   }
   .landing_container {
     margin-top: 0rem;
+  }
+
+  #filip_name,
+  #filip_description {
+    text-align: center;
   }
 }
 
