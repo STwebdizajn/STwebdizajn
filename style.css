@@ -85,7 +85,7 @@ a {
   height: inherit;
   text-align: right;
   align-items: center;
-  margin-right: 5rem;
+
   right: 10px;
   top: 90px;
 }
@@ -117,6 +117,7 @@ a {
   align-items: center;
   justify-content: space-evenly; /* changed from center to space-between */
   height: 100vh;
+  align-content: center;
 }
 
 #landing_logo {
@@ -133,7 +134,6 @@ a {
 }
 
 .team_img {
-  background-color: #002f63;
   width: 20rem;
   height: 20rem;
   border-radius: 5%;
@@ -145,7 +145,7 @@ a {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-around; /* changed from center to space-between */
-  height: 60vh;
+  height: 50vh;
   width: 100vw;
 }
 
@@ -165,7 +165,7 @@ a {
 }
 
 #quote_text {
-  width: 35rem;
+  max-width: 35rem;
   font-size: 20px;
 }
 
@@ -208,8 +208,6 @@ a {
   align-items: center;
   justify-content: space-evenly;
   height: 60vh;
-  padding-top: 3rem;
-  padding-bottom: 5rem;
 }
 
 #img_nasrad {
@@ -232,30 +230,33 @@ a {
   margin-bottom: 0;
 }
 
-.line {
-  background-color: var(--line);
-  height: 20rem;
-  width: 2px;
-}
-
 .options_container {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
   justify-content: center;
-  height: 100%;
+  gap: 2rem; /* spacing between groups */
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.option_group {
+  display: flex;
+  gap: 2.5rem;
+  text-align: center;
+}
+
+.line {
+  width: 2px;
+
+  background-color: black;
+
+  /* Stretch automatically to match the text height */
 }
 
 .options_subcontainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-
-  width: 15%;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  max-width: 200px;
 }
 
 .kontakt_container {
@@ -308,13 +309,15 @@ a {
 }
 
 .input_first {
-  display: inline-block;
+  display: flex;
   max-width: 35rem;
   width: 100%;
+  flex-wrap: nowrap;
 }
 
 #message {
   height: 8rem;
+  font-size: 15px;
 }
 
 .input_second {
@@ -388,8 +391,8 @@ a {
 }
 
 #first_name_label {
-  padding-right: 16rem;
-  padding-left: 0.5rem;
+  position: relative;
+  left: 10px;
 }
 
 .label_forum {
@@ -399,7 +402,7 @@ a {
 }
 
 #last_name_label {
-  margin-right: 0.5rem;
+  padding-left: 16rem;
 }
 
 .active {
@@ -420,8 +423,11 @@ a {
   align-items: center;
   align-content: center;
   text-align: right;
-  width: 6rem;
-  margin-top: 17px;
+  width: 7rem;
+  height: 6rem;
+  margin-top: 13px;
+  border-radius: 5px;
+  margin-left: -5.2rem;
 }
 
 @media screen and (max-width: 950px) {
@@ -431,6 +437,12 @@ a {
   #hamburgerID {
     width: 2rem;
     height: 2rem;
+  }
+  .headerbar_subcontainer {
+    padding-right: 1rem;
+  }
+  #header_banner {
+    padding-left: 1rem;
   }
 }
 
@@ -445,13 +457,15 @@ a {
     margin-top: 5rem;
     flex-wrap: wrap-reverse;
     align-items: baseline;
-    margin-bottom: 10rem;
+  }
+  .line {
+    display: none;
   }
 }
 
 @media screen and (max-width: 639px) {
   .quote_container {
-    margin-top: 25rem;
+    margin-top: 30rem;
   }
 }
 
@@ -460,7 +474,8 @@ a {
     display: none;
   }
   .nasrad_landing_subcontainer {
-    width: 60%;
+    width: 80%;
+    font-size: 18px;
   }
 }
 
@@ -483,8 +498,48 @@ a {
   .kontakt_container {
     flex-direction: column;
     align-items: center;
+    padding-top: 5rem;
   }
   .kontakt_text_container {
-    margin-left: 12.5rem;
+    margin-left: 8rem;
+  }
+  .kontakt_img {
+    width: 20rem;
+    height: 15rem;
+  }
+  .forum_img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .landing_subcontainer,
+  #landing_subtitle {
+    text-align: center;
+  }
+  #landing_logo {
+    width: 20rem;
+    height: 20rem;
+  }
+  #landing_subtitle {
+    font-size: 15px;
+  }
+  .team_img {
+    width: 17rem;
+    height: 17rem;
+  }
+
+  .team_subcontainer {
+    padding-bottom: 3rem;
+    text-align: center;
+  }
+  .landing_container {
+    margin-top: 0rem;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  #last_name_label {
+    display: none;
   }
 }
