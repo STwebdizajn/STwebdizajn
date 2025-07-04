@@ -32,36 +32,6 @@ function sendMail(event) {
   return false; // Prevent form from submitting
 }
 
-const toggleBtn = document.getElementById("theme-toggle");
-
-const imageLogo = document.getElementById("landing_logo");
-const imageBanner = document.getElementById("header_banner");
-const sun_moon = document.getElementById("sun-moon");
-const hamburgerBtn = document.getElementById("hamburgerID");
-
-// Load theme from storage
-const currentTheme = localStorage.getItem("theme") || "light";
-document.documentElement.classList.toggle(
-  "dark-theme",
-  currentTheme === "dark"
-);
-
-toggleBtn.addEventListener("click", () => {
-  const isDark = document.documentElement.classList.toggle("dark-theme");
-  localStorage.setItem("theme", isDark ? "dark" : "light");
-  if (isDark) {
-    imageLogo.src = "./images/Logotype-Transparent-White.png";
-    imageBanner.src = "./images/Banner-Transparent-White-Cropped.png";
-    sun_moon.src = "./images/light theme button.png";
-    hamburgerBtn.src = "./images/options button - dark theme.png";
-  } else {
-    imageLogo.src = "./images/Logotype-Transparent-NavyBlue.png";
-    imageBanner.src = "./images/Banner-Transparent-Black-Cropped.png";
-    sun_moon.src = "./images/dark theme button.png";
-    hamburgerBtn.src = "./images/options button - light theme.png";
-  }
-});
-
 function toggleMenu() {
   const container = document.getElementById("hamburgerBtn_options_container");
   if (container.style.display === "none" || container.style.display === "") {
@@ -71,4 +41,42 @@ function toggleMenu() {
     container.style.display = "none";
     sun_moon.style.display = "inline";
   }
+}
+
+// Detect system theme and set class on <html> and switch images
+function applyThemeImages() {
+  const isDark =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const headerBanner = document.getElementById("header_banner");
+  const landingLogo = document.getElementById("landing_logo");
+  const hamburgerBtn = document.getElementById("hamburgerID");
+
+  if (isDark) {
+    document.documentElement.classList.add("dark-theme");
+    if (headerBanner)
+      headerBanner.src = "./images/Banner-Transparent-White-Cropped.png";
+    if (landingLogo)
+      landingLogo.src = "./images/Logotype-Transparent-White.png";
+    if (hamburgerBtn)
+      hamburgerBtn.src = "./images/options button - dark theme.png";
+  } else {
+    document.documentElement.classList.remove("dark-theme");
+    if (headerBanner)
+      headerBanner.src = "./images/Banner-Transparent-Black-Cropped.png";
+    if (landingLogo)
+      landingLogo.src = "./images/Logotype-Transparent-NavyBlue.png";
+    if (hamburgerBtn)
+      hamburgerBtn.src = "./images/options button - light theme.png";
+  }
+}
+
+// Run on load
+applyThemeImages();
+
+// Listen for system theme changes
+if (window.matchMedia) {
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", applyThemeImages);
 }
