@@ -31,6 +31,7 @@
 html {
   scroll-padding-top: 6rem;
   scroll-behavior: smooth;
+  color-scheme: light;
 }
 
 body {
@@ -324,7 +325,7 @@ a {
 
 #message {
   height: 8rem;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .input_second {
