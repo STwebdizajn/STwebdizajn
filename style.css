@@ -118,11 +118,23 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  height: 100vh;
+  height: 90vh;
   align-content: center;
   padding-top: calc(
     env(safe-area-inset-top, 0px) + 4rem
   ); /* Increased by 3rem */
+}
+
+/* Always add safe-area-inset-top, but only add extra 3rem if the inset is present */
+.landing_container {
+  /* fallback for browsers that don't support env() */
+  padding-top: 5rem;
+}
+
+@supports (padding-top: max(0px)) {
+  .landing_container {
+    padding-top: max(calc(env(safe-area-inset-top, 0px)), 5rem);
+  }
 }
 
 #landing_logo {
