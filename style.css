@@ -29,7 +29,7 @@
 }
 
 html {
-  scroll-padding-top: 6rem;
+  scroll-padding-top: calc(6rem + env(safe-area-inset-top, 0px));
   scroll-behavior: smooth;
   color-scheme: light dark;
 }
@@ -66,6 +66,7 @@ a {
   align-items: center;
   justify-content: space-between;
   text-align: right;
+  padding-top: env(safe-area-inset-top, 0px);
 }
 
 .headerbar_subcontainer {
@@ -119,6 +120,7 @@ a {
   justify-content: space-evenly; /* changed from center to space-between */
   height: 100vh;
   align-content: center;
+  padding-top: calc(env(safe-area-inset-top, 0px) + 1rem);
 }
 
 #landing_logo {
