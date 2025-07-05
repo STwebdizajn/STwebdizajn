@@ -88,8 +88,8 @@ a {
   text-align: right;
   align-items: center;
 
-  right: 10px;
-  top: 90px;
+  right: 0.625rem; /* 10px */
+  top: 5.625rem; /* 90px */
 }
 
 #sun-moon {
@@ -104,8 +104,8 @@ a {
 }
 
 #header_banner {
-  height: 3rem;
   padding-left: 6rem;
+  height: 3rem;
 }
 
 .link {
@@ -188,11 +188,11 @@ a {
 
 #quote_text {
   max-width: 35rem;
-  font-size: 20px;
+  font-size: 1.25rem; /* 20px -> 1.25rem */
 }
 
 #quote {
-  font-size: 30px;
+  font-size: 1.875rem; /* 30px -> 1.875rem */
   padding-bottom: 6rem;
 }
 
@@ -214,14 +214,14 @@ a {
 }
 
 #servisi {
-  font-size: 40px;
+  font-size: 2.5rem; /* 40px -> 2.5rem */
   margin-bottom: 0;
   letter-spacing: 0.1rem;
 }
 
 #servisi_opis {
   margin-top: 0.7rem;
-  font-size: 22px;
+  font-size: 1.375rem; /* 22px -> 1.375rem */
 }
 
 .nasrad_landing_container {
@@ -267,7 +267,7 @@ a {
 }
 
 .line {
-  width: 2px;
+  width: 0.125rem; /* 2px -> 0.125rem */
 
   background-color: var(--line);
 
@@ -278,7 +278,7 @@ a {
   display: flex;
   flex-direction: column;
   text-align: center;
-  max-width: 200px;
+  max-width: 12.5rem; /* 200px -> 12.5rem */
 }
 
 .kontakt_container {
@@ -318,10 +318,10 @@ a {
 }
 
 .input_field {
-  border: 3px solid #002f63;
-  border-radius: 10px;
-  padding: 10px;
-  margin-bottom: 10px;
+  border: 0.1875rem solid #002f63; /* 3px */
+  border-radius: 0.625rem; /* 10px */
+  padding: 0.625rem; /* 10px */
+  margin-bottom: 0.625rem; /* 10px */
   background-color: var(--input);
   color: var(--text-primary);
   font-family: "Poppins";
@@ -341,7 +341,7 @@ a {
 
 #message {
   height: 8rem;
-  font-size: 15px;
+  font-size: 0.9375rem; /* 15px -> 0.9375rem */
 }
 
 .input_second {
@@ -374,9 +374,9 @@ a {
 #submit_btn {
   width: 25%;
   height: 2rem;
-  border-radius: 10px;
+  border-radius: 0.625rem; /* 10px */
   background-color: var(--btn-primary);
-  border: var(--btn-border) solid 3px;
+  border: var(--btn-border) solid 0.1875rem; /* 3px */
 
   color: var(--btn-text);
 }
@@ -416,17 +416,17 @@ a {
 
 #first_name_label {
   position: relative;
-  left: 10px;
+  left: 0.625rem; /* 10px -> 0.625rem */
 }
 
 .label_forum {
   color: #002f63;
-  padding-left: 0.5rem;
-  padding-bottom: 0.3rem;
+  padding-left: 0.5rem; /* 8px */
+  padding-bottom: 0.3rem; /* 4.8px */
 }
 
 #last_name_label {
-  padding-left: 16rem;
+  padding-left: 16rem; /* 256px */
 }
 
 .active {
@@ -449,8 +449,8 @@ a {
   text-align: right;
   width: 7rem;
   height: 6rem;
-  margin-top: 13px;
-  border-radius: 5px;
+  margin-top: 0.8125rem; /* 13px -> 0.8125rem */
+  border-radius: 0.3125rem; /* 5px -> 0.3125rem */
   margin-left: -5.2rem;
 }
 
@@ -463,10 +463,10 @@ a {
     height: 2rem;
   }
   .headerbar_subcontainer {
-    padding-right: 1rem;
+    padding-right: 1rem; /* 16px */
   }
   #header_banner {
-    padding-left: 1rem;
+    padding-left: 1rem; /* 16px */
   }
 }
 
@@ -499,7 +499,7 @@ a {
   }
   .nasrad_landing_subcontainer {
     width: 80%;
-    font-size: 18px;
+    font-size: 1.125rem; /* 18px -> 1.125rem */
   }
 }
 
@@ -508,7 +508,7 @@ a {
     flex-wrap: wrap;
   }
   .forum_img {
-    margin-bottom: 70px;
+    margin-bottom: 4.375rem; /* 70px -> 4.375rem */
   }
 }
 
@@ -525,7 +525,7 @@ a {
     padding-top: 5rem;
   }
   .kontakt_text_container {
-    margin-left: 8rem;
+    margin-left: 8rem; /* 128px */
   }
   .kontakt_img {
     width: 20rem;
@@ -546,7 +546,7 @@ a {
     height: 20rem;
   }
   #landing_subtitle {
-    font-size: 15px;
+    font-size: 0.9375rem; /* 15px -> 0.9375rem */
   }
   .team_img {
     width: 17rem;
@@ -554,7 +554,7 @@ a {
   }
 
   .team_subcontainer {
-    padding-bottom: 3rem;
+    padding-bottom: 3rem; /* 48px */
     text-align: center;
   }
   .landing_container {
