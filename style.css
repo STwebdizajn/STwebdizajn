@@ -117,10 +117,12 @@ a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly; /* changed from center to space-between */
+  justify-content: space-evenly;
   height: 100vh;
   align-content: center;
-  padding-top: calc(env(safe-area-inset-top, 0px) + 1rem);
+  padding-top: calc(
+    env(safe-area-inset-top, 0px) + 4rem
+  ); /* Increased by 3rem */
 }
 
 #landing_logo {
