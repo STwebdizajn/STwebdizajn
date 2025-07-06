@@ -14,6 +14,12 @@ links.forEach((link) => {
 function sendMail(event) {
   if (event) event.preventDefault();
 
+  // Get the latest values from the form
+  let name =
+    document.getElementById("first_name").value +
+    " " +
+    document.getElementById("last_name").value;
+
   let parms = {
     name,
     email: document.getElementById("email").value,
