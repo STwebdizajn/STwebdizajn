@@ -51,7 +51,7 @@
     <div id="landing_container">
       <div id="landing_text-container">
         <h1 id="landing_title">Web stranica?</h1>
-        <h2 id="landing_subtitle">Znate koga da zovete</h2>
+        <h2 id="landing_subtitle">Znate koga da zovete.</h2>
       </div>
       <div id="button_container">
         <button
@@ -60,7 +60,7 @@
         >
           SAZNAJ VIŠE
         </button>
-        <button onClick="location.href='./kontakt.html'" id="button_contact">
+        <button onClick="location.href='./kontakt.html'" class="button_contact">
           KONTAKTIRAJ
         </button>
       </div>
@@ -125,7 +125,7 @@
           </p>
         </div>
       </div>
-      <button onClick="location.href='./kontakt.html'" id="button_contact">
+      <button onClick="location.href='./kontakt.html'" class="button_contact">
         KONTAKTIRAJ
       </button>
     </div>
@@ -143,7 +143,7 @@
           naslovna_link: "HOME",
           // Navigation links (CJENOVNIK, KONTAKT) - select by text below
           landing_title: "Website?",
-          landing_subtitle: "You know who to call",
+          landing_subtitle: "You know who to call.",
           button_learn_more: "LEARN MORE",
           button_contact: "CONTACT",
           about_us_title: "About us",
@@ -172,7 +172,7 @@
         bs: {
           naslovna_link: "NASLOVNA",
           landing_title: "Web stranica?",
-          landing_subtitle: "Znate koga da zovete",
+          landing_subtitle: "Znate koga da zovete.",
           button_learn_more: "SAZNAJ VIŠE",
           button_contact: "KONTAKTIRAJ",
           about_us_title: "O nama",
@@ -208,8 +208,13 @@
           translations[lang].landing_subtitle;
         document.getElementById("button_learn_more").textContent =
           translations[lang].button_learn_more;
-        document.getElementById("button_contact").textContent =
-          translations[lang].button_contact;
+        // Update all contact buttons
+        document
+          .querySelectorAll("#button_contact, .button_contact")
+          .forEach((btn) => {
+            btn.textContent = translations[lang].button_contact;
+          });
+
         document.getElementById("about_us_title").textContent =
           translations[lang].about_us_title;
         document.getElementById("about_us_text").textContent =

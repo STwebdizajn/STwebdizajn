@@ -84,7 +84,7 @@ a {
 }
 
 #button_learn_more,
-#button_contact {
+.button_contact {
   width: 8.3125rem; /* 133px */
   height: 2.625rem; /* 42px */
   border-radius: 8.125rem; /* 130px */
@@ -104,7 +104,7 @@ a {
   border: 0.1875rem solid #002f63; /* 3px */
 }
 
-#button_contact {
+.button_contact {
   background-color: #002f63;
   color: white;
   border: 0.1875rem solid #002f63; /* 3px */
