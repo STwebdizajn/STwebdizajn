@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S&T web design</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="./favicon_io/favicon-32x32.png" type="image/png" />
+    <title>S&T Web Design</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-M2C8RSGHZ0"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-M2C8RSGHZ0");
+    </script>
+  </head>
+  <body>
+    <div id="header_container">
+      <img
+        src="./images/Logotype-Transparent-Black.svg"
+        alt="Icon"
+        id="header_icon"
+      />
+      <p><a href="./index.html">NASLOVNA</a></p>
+      <p><a id="naslovna_link" href="./cjenovnik.html">CJENOVNIK</a></p>
+      <p><a href="./kontakt.html">KONTAKT</a></p>
+
+      <img
+        id="language_flag"
+        src="./images/bosnian_flag.png"
+        alt="bosnian flag"
+        style="cursor: pointer"
+      />
+    </div>
+
+    <div id="cjenovnik_container">
+      <div class="cjenovnik_item item1">
+        <div class="packet_content">
+          <h2 class="packet_name">One-page Web Stranica</h2>
+          <h3 class="packet_description">
+            Jednostavna prezentacijska stranica s osnovnim sekcijama.
+          </h3>
+          <h3 class="packet_cost">~ 1000 BAM</h3>
+          <p class="packet_specification">
+            Specifikacije se određuju prema dogovoru.
+          </p>
+          <button
+            onClick="location.href='./kontakt.html'"
+            class="packet_button"
+            id="button_contact"
+          >
+            KONTAKTIRAJ
+          </button>
+        </div>
+      </div>
+
+      <div class="cjenovnik_item item2">
+        <div class="packet_content">
+          <h2 class="packet_name">Standardna Web Stranica</h2>
+          <h3 class="packet_description">
+            Višestranica s osnovnim podstranicama (Home, O Nama, Kontakt).
+          </h3>
+          <h3 class="packet_cost">~ 2000 BAM</h3>
+          <p class="packet_specification">
+            Specifikacije se određuju prema dogovoru.
+          </p>
+          <button
+            onClick="location.href='./kontakt.html'"
+            class="packet_button"
+            id="button_contact"
+          >
+            KONTAKTIRAJ
+          </button>
+        </div>
+      </div>
+
+      <div class="cjenovnik_item item3">
+        <div class="packet_content">
+          <h2 class="packet_name">Poslovna Web Stranica</h2>
+          <h3 class="packet_description">
+            Profesionalna stranica srednje veličine s dodatnim opcijama.
+          </h3>
+          <h3 class="packet_cost">~ 3500 BAM</h3>
+          <p class="packet_specification">
+            Specifikacije se određuju prema dogovoru.
+          </p>
+          <button
+            onClick="location.href='./kontakt.html'"
+            class="packet_button"
+            id="button_contact"
+          >
+            KONTAKTIRAJ
+          </button>
+        </div>
+      </div>
+
+      <div class="cjenovnik_item item4">
+        <div class="packet_content">
+          <h2 class="packet_name">Kompleksna Web Stranica</h2>
+          <h3 class="packet_description">
+            Veliki i prilagođeni projekti s integracijom dodatnih sistema.
+          </h3>
+          <h3 class="packet_cost">~ 4500 BAM</h3>
+          <p class="packet_specification">
+            Specifikacije se određuju prema dogovoru.
+          </p>
+          <button
+            onClick="location.href='./kontakt.html'"
+            class="packet_button"
+            id="button_contact"
+          >
+            KONTAKTIRAJ
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer_container">
+      <img src="./images/footer_img.svg" alt="logo" />
+      <p id="footer_text">
+        Copyright © 2025 S&T Web Design All rights reserved.
+      </p>
+    </div>
+
+    <script>
+      const translations = {
+        en: {
+          // Header navigation
+          naslovna_link: "HOME",
+          cjenovnik_link: "PRICING",
+          kontakt_link: "CONTACT",
+          // Packet 1
+          packet1_name: "One-page Informative Website",
+          packet1_desc: "Simple presentation page with basic sections.",
+          packet1_cost: "~ 1000 BAM",
+          packet1_spec: "Specifications are determined by agreement.",
+          // Packet 2
+          packet2_name: "Standard Multi-page Website",
+          packet2_desc:
+            "Multi-page website with basic subpages (Home, About Us, Contact).",
+          packet2_cost: "~ 2000 BAM",
+          packet2_spec: "Specifications are determined by agreement.",
+          // Packet 3
+          packet3_name: "Professional Business Website",
+          packet3_desc: "Professional medium-sized site with extra options.",
+          packet3_cost: "~ 3500 BAM",
+          packet3_spec: "Specifications are determined by agreement.",
+          // Packet 4
+          packet4_name: "Complex Custom Website",
+          packet4_desc: "Large custom projects with added system integration.",
+          packet4_cost: "~ 4500 BAM",
+          packet4_spec: "Specifications are determined by agreement.",
+          // Button (all)
+          button_contact: "CONTACT",
+          // Footer
+          footer_text: "Copyright © 2025 S&T Web Design All rights reserved.",
+        },
+        bs: {
+          naslovna_link: "NASLOVNA",
+          cjenovnik_link: "CJENOVNIK",
+          kontakt_link: "KONTAKT",
+          packet1_name: "One-page Web Stranica",
+          packet1_desc:
+            "Jednostavna prezentacijska stranica s osnovnim sekcijama.",
+          packet1_cost: "~ 1000 BAM",
+          packet1_spec: "Specifikacije se određuju prema dogovoru.",
+          packet2_name: "Standardna Web Stranica",
+          packet2_desc:
+            "Stranica s osnovnim podstranicama (Home, O Nama, Kontakt).",
+          packet2_cost: "~ 2000 BAM",
+          packet2_spec: "Specifikacije se određuju prema dogovoru.",
+          packet3_name: "Poslovna Web Stranica",
+          packet3_desc:
+            "Profesionalna stranica srednje veličine s dodatnim opcijama.",
+          packet3_cost: "~ 3500 BAM",
+          packet3_spec: "Specifikacije se određuju prema dogovoru.",
+          packet4_name: "Kompleksna Web Stranica",
+          packet4_desc:
+            "Veliki i prilagođeni projekti s integracijom dodatnih sistema.",
+          packet4_cost: "~ 4500 BAM",
+          packet4_spec: "Specifikacije se određuju prema dogovoru.",
+          button_contact: "KONTAKTIRAJ",
+          footer_text: "Copyright © 2025 S&T Web Design All rights reserved.",
+        },
+      };
+
+      function setLanguage(lang) {
+        // Header navigation
+        document.querySelector('a[href="./index.html"]').textContent =
+          translations[lang].naslovna_link;
+        document.querySelector('a[href="./cjenovnik.html"]').textContent =
+          translations[lang].cjenovnik_link;
+        document.querySelector('a[href="./kontakt.html"]').textContent =
+          translations[lang].kontakt_link;
+
+        // Packets
+        const packetNames = document.querySelectorAll(
+          ".cjenovnik_item .packet_name"
+        );
+        const packetDescs = document.querySelectorAll(
+          ".cjenovnik_item .packet_description"
+        );
+        const packetCosts = document.querySelectorAll(
+          ".cjenovnik_item .packet_cost"
+        );
+        const packetSpecs = document.querySelectorAll(
+          ".cjenovnik_item .packet_specification"
+        );
+        const packetButtons = document.querySelectorAll(
+          ".cjenovnik_item .packet_button"
+        );
+
+        // Set for each packet (order matters)
+        [
+          ["packet1_name", "packet1_desc", "packet1_cost", "packet1_spec"],
+          ["packet2_name", "packet2_desc", "packet2_cost", "packet2_spec"],
+          ["packet3_name", "packet3_desc", "packet3_cost", "packet3_spec"],
+          ["packet4_name", "packet4_desc", "packet4_cost", "packet4_spec"],
+        ].forEach((keys, i) => {
+          if (packetNames[i])
+            packetNames[i].textContent = translations[lang][keys[0]];
+          if (packetDescs[i])
+            packetDescs[i].textContent = translations[lang][keys[1]];
+          if (packetCosts[i])
+            packetCosts[i].textContent = translations[lang][keys[2]];
+          if (packetSpecs[i])
+            packetSpecs[i].textContent = translations[lang][keys[3]];
+          if (packetButtons[i])
+            packetButtons[i].textContent = translations[lang].button_contact;
+        });
+
+        // Footer
+        document.getElementById("footer_text").textContent =
+          translations[lang].footer_text;
+      }
+
+      // Flag image toggle
+      function updateFlag(lang) {
+        const flag = document.getElementById("language_flag");
+        if (lang === "en") {
+          flag.src = "./images/british_flag.png";
+          flag.alt = "british flag";
+        } else {
+          flag.src = "./images/bosnian_flag.png";
+          flag.alt = "bosnian flag";
+        }
+      }
+
+      // On page load, set language from localStorage or default to Bosnian
+      let currentLang = localStorage.getItem("siteLang") || "bs";
+      setLanguage(currentLang);
+      updateFlag(currentLang);
+
+      document
+        .getElementById("language_flag")
+        .addEventListener("click", function () {
+          currentLang = currentLang === "bs" ? "en" : "bs";
+          setLanguage(currentLang);
+          updateFlag(currentLang);
+          localStorage.setItem("siteLang", currentLang);
+        });
+    </script>
+  </body>
+</html>

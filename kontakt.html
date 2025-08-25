@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S&T web design</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="./favicon_io/favicon-32x32.png" type="image/png" />
+    <title>S&T Web Design</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-M2C8RSGHZ0"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-M2C8RSGHZ0");
+    </script>
+  </head>
+  <body>
+    <div id="header_container">
+      <img
+        src="./images/Logotype-Transparent-Black.svg"
+        alt="Icon"
+        id="header_icon"
+      />
+      <p><a href="./index.html">NASLOVNA</a></p>
+      <p><a href="./cjenovnik.html">CJENOVNIK</a></p>
+      <p><a id="naslovna_link" href="./kontakt.html">KONTAKT</a></p>
+
+      <img
+        id="language_flag"
+        src="./images/bosnian_flag.png"
+        alt="bosnian flag"
+        style="cursor: pointer"
+      />
+    </div>
+
+    <div id="contact_container">
+      <div id="landing_text-container">
+        <h1 id="landing_title">Web stranica?</h1>
+        <h2 id="landing_subtitle">Znate koga da zovete</h2>
+      </div>
+    </div>
+
+    <div id="contact_form_container">
+      <form id="contact_form">
+        <label class="label_text" for="name">Ime i prezime</label>
+        <input
+          placeholder="Vaše ime..."
+          class="input_field"
+          type="text"
+          id="name"
+          name="name"
+          required
+        />
+
+        <label class="label_text" for="email">Email</label>
+        <input
+          placeholder="Vaš email..."
+          class="input_field"
+          type="email"
+          id="email"
+          name="email"
+          required
+        />
+
+        <label class="label_text" for="message">Poruka</label>
+        <textarea
+          class="input_field textarea_field"
+          placeholder="Vaša poruka..."
+          id="message"
+          name="message"
+          rows="4"
+          required
+        ></textarea>
+
+        <button id="submit_button" type="submit">POŠALJI</button>
+      </form>
+    </div>
+
+    <div id="contact_info">
+      <h2 id="contact_info_title">Imate pitanje? Javite se!</h2>
+      <div id="email_info">
+        <img src="./images/email.svg" alt="Email logo" />
+        <p class="contact_text">stwebdesign@gmail.com</p>
+      </div>
+      <div id="phone_info">
+        <img id="phone_logo" src="./images/phone.svg" alt="Phone logo" />
+        <p class="contact_text phone_numbers">
+          +387 62 376 036 +387 61 385 312
+        </p>
+      </div>
+    </div>
+
+    <div id="footer_container">
+      <img src="./images/footer_img.svg" alt="logo" />
+      <p id="footer_text">
+        Copyright © 2025 S&T Web Design All rights reserved.
+      </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init({
+          publicKey: "5KCy53w1DRKRzAp_P",
+        });
+      })();
+    </script>
+    <script src="./main.js"></script>
+    <script>
+      document
+        .getElementById("contact_form")
+        .addEventListener("submit", sendMail);
+    </script>
+
+    <script>
+      (function () {
+        // -------------------------------
+        // Translations for this page
+        // -------------------------------
+        const translations = {
+          en: {
+            nav_home: "HOME",
+            nav_pricing: "PRICING",
+            nav_contact: "CONTACT",
+
+            landing_title: "Website?",
+            landing_subtitle: "You know who to call",
+
+            label_name: "Full name",
+            label_email: "Email",
+            label_message: "Message",
+
+            ph_name: "Your name...",
+            ph_email: "Your email...",
+            ph_message: "Your message...",
+
+            submit_button: "SEND",
+
+            contact_info_title: "Got a question? Get in touch!",
+
+            footer_text:
+              "Copyright © 2025 S&T Web Design All rights reserved.",
+          },
+          bs: {
+            nav_home: "NASLOVNA",
+            nav_pricing: "CJENOVNIK",
+            nav_contact: "KONTAKT",
+
+            landing_title: "Web stranica?",
+            landing_subtitle: "Znate koga da zovete",
+
+            label_name: "Ime i prezime",
+            label_email: "Email",
+            label_message: "Poruka",
+
+            ph_name: "Vaše ime...",
+            ph_email: "Vaš email...",
+            ph_message: "Vaša poruka...",
+
+            submit_button: "POŠALJI",
+
+            contact_info_title: "Imate pitanje? Javite se!",
+
+            footer_text:
+              "Copyright © 2025 S&T Web Design All rights reserved.",
+          },
+        };
+
+        // -------------------------------
+        // Apply language to the DOM
+        // -------------------------------
+        function setLanguage(lang) {
+          // Header nav (select by href to avoid touching any IDs)
+          const aHome = document.querySelector('a[href="./index.html"]');
+          const aPricing = document.querySelector('a[href="./cjenovnik.html"]');
+          const aContact = document.querySelector('a[href="./kontakt.html"]');
+          if (aHome) aHome.textContent = translations[lang].nav_home;
+          if (aPricing) aPricing.textContent = translations[lang].nav_pricing;
+          if (aContact) aContact.textContent = translations[lang].nav_contact;
+
+          // Hero texts
+          const landingTitle = document.getElementById("landing_title");
+          const landingSubtitle = document.getElementById("landing_subtitle");
+          if (landingTitle)
+            landingTitle.textContent = translations[lang].landing_title;
+          if (landingSubtitle)
+            landingSubtitle.textContent = translations[lang].landing_subtitle;
+
+          // Form labels (select by 'for' so we don't change IDs)
+          const labelName = document.querySelector('label[for="name"]');
+          const labelEmail = document.querySelector('label[for="email"]');
+          const labelMessage = document.querySelector('label[for="message"]');
+          if (labelName) labelName.textContent = translations[lang].label_name;
+          if (labelEmail)
+            labelEmail.textContent = translations[lang].label_email;
+          if (labelMessage)
+            labelMessage.textContent = translations[lang].label_message;
+
+          // Placeholders
+          const inputName = document.getElementById("name");
+          const inputEmail = document.getElementById("email");
+          const inputMessage = document.getElementById("message");
+          if (inputName) inputName.placeholder = translations[lang].ph_name;
+          if (inputEmail) inputEmail.placeholder = translations[lang].ph_email;
+          if (inputMessage)
+            inputMessage.placeholder = translations[lang].ph_message;
+
+          // Submit button
+          const submitBtn = document.getElementById("submit_button");
+          if (submitBtn)
+            submitBtn.textContent = translations[lang].submit_button;
+
+          // Contact info block
+          const infoTitle = document.getElementById("contact_info_title");
+          if (infoTitle)
+            infoTitle.textContent = translations[lang].contact_info_title;
+
+          // Footer
+          const footer = document.getElementById("footer_text");
+          if (footer) footer.textContent = translations[lang].footer_text;
+        }
+
+        // -------------------------------
+        // Flag image toggle
+        // -------------------------------
+        function updateFlag(lang) {
+          const flagImg = document.getElementById("language_flag");
+          if (!flagImg) return;
+
+          if (lang === "en") {
+            flagImg.src = "./images/british_flag.png";
+            flagImg.alt = "british flag";
+          } else {
+            flagImg.src = "./images/bosnian_flag.png";
+            flagImg.alt = "bosnian flag";
+          }
+        }
+
+        let currentLang = localStorage.getItem("siteLang") || "bs";
+        setLanguage(currentLang);
+        updateFlag(currentLang);
+
+        const flagImg = document.getElementById("language_flag");
+        if (flagImg) {
+          flagImg.addEventListener("click", function () {
+            currentLang = currentLang === "bs" ? "en" : "bs";
+            setLanguage(currentLang);
+            updateFlag(currentLang);
+            localStorage.setItem("siteLang", currentLang);
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
