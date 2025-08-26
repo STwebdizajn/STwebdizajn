@@ -45,6 +45,11 @@ a {
   color: black;
 }
 
+#header_container p:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s;
+}
+
 #naslovna_link {
   -webkit-text-stroke: 0.0125rem black; /* 0.2px */
 }
@@ -60,6 +65,11 @@ a {
   gap: 1.3125rem; /* 21px */
 
   height: calc(100vh - 3rem); /* 48px */
+}
+
+#landing_logo:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
 }
 
 #landing_title,
@@ -96,6 +106,12 @@ a {
   cursor: pointer;
 
   box-shadow: 0 0.1875rem 0.3125rem 0 rgba(0, 0, 0, 0.25); /* 3px 5px */
+}
+
+#button_learn_more:hover,
+.button_contact:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s;
 }
 
 #button_learn_more {
@@ -161,6 +177,11 @@ a {
   align-items: center;
 }
 
+.team_member:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s;
+}
+
 .name {
   font-size: 1.75rem; /* 28px */
   font-weight: 300;
@@ -210,6 +231,11 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.service_box:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s;
 }
 
 .service_name {
@@ -281,6 +307,11 @@ a {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.cjenovnik_item:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s;
 }
 
 .item1 {
@@ -410,6 +441,11 @@ a {
   box-shadow: 0 0.1875rem 0.3125rem 0 rgba(0, 0, 0, 0.25);
 }
 
+.input_field:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s;
+}
+
 #submit_button {
   background-color: #002f63;
   width: 8.3125rem; /* 133px */
@@ -429,6 +465,11 @@ a {
   margin-top: 1.3125rem; /* 21px */
 
   z-index: 10000;
+}
+
+#submit_button:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s;
 }
 
 .textarea_field {
