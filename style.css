@@ -532,6 +532,13 @@ a {
 
 /* RESPONSIVE DESIGN FOR NASLOVNA*/
 
+@media only screen and (max-height: 869px) {
+  #landing_logo {
+    max-width: 25rem;
+    height: auto;
+  }
+}
+
 @media only screen and (max-width: 755px) {
   #about_us_subcontainer {
     flex-direction: column;
